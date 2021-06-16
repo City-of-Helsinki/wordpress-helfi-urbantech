@@ -1,0 +1,14 @@
+path: web/wp
+server:
+  docroot: web
+
+require:
+  - vendor/generoi/genero-conf/wp/wp-cli-pre-ssh.php
+
+'@docker':
+  path: /var/www/html/web/wp
+  url: urban-tech-helsinki.ddev.local
+
+'@dev':
+  ssh: vagrant@urban-tech-helsinki.test/var/www/wordpress/web/wp
+  url: urban-tech-helsinki.test

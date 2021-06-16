@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Black",
+    "slug": "black",
+    "color": "#000000"
+  },
+  {
+    "name": "White",
+    "slug": "white",
+    "color": "#ffffff"
+  }
+]
