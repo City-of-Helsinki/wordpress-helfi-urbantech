@@ -135,7 +135,6 @@
         margin-bottom: 0;
         padding: $spacing-xl $spacing-layout-2-xs;
         padding-bottom: calc(#{$spacing-xl} + 50px);
-        background-color: $color-silver;
 
         h1 {
           margin-bottom: 0;
@@ -146,10 +145,6 @@
         margin-left: 0;
         margin-top: -$spacing-l;
         margin-bottom: 0;
-
-        figcaption {
-          color: $color-black-50;
-        }
       }
 
       .wp-block-columns {
@@ -234,13 +229,13 @@
       display: inline-block;
       margin-right: $spacing-2-xs;
       margin-bottom: $spacing-2-xs;
-      background-color: $color-bus-light;
+      background-color: blue;
       border-radius: 40px;
       padding: $spacing-2-xs $spacing-s;
 
       a {
         text-decoration: none;
-        color: $color-bus;
+        color: blue;
         font-weight: bold;
       }
     }

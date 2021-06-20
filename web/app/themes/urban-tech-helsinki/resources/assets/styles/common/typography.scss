@@ -106,14 +106,14 @@ p {
 }
 
 a {
-  color: $color-coat-of-arms;
+  color: inherit;
 
   &:hover {
     background-color: #f2f2fc;
   }
 
   &:focus {
-    outline: auto 3px $color-coat-of-arms;
+    outline: auto 3px blue;
     outline-offset: 2px;
   }
 }

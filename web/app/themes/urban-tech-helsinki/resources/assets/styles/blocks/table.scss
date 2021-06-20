@@ -10,11 +10,11 @@
   thead {
     border: none;
     color: $color-white;
-    background-color: $color-bus;
+    background-color: blue;
   }
 
   tbody tr:nth-child(even) {
-    background-color: $color-bus-light;
+    background-color: blue;
   }
 
   td,
@@ -39,7 +39,7 @@
 
   &.is-style-stripes {
     tbody tr:nth-child(even) {
-      background-color: $color-black-10;
+      background-color: rgba($color-black, 10%);
     }
   }
 }

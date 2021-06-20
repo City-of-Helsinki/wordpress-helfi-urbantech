@@ -19,7 +19,7 @@
     position: relative;
     list-style: none;
     font-weight: 500;
-    color: $color-black-90;
+    color: $color-black;
   }
 
   &__link {
@@ -61,7 +61,7 @@
     }
 
     &:focus {
-      outline: solid 3px $color-coat-of-arms;
+      outline: solid 3px blue;
     }
   }
 
@@ -131,7 +131,7 @@
       .is-level-1[aria-expanded="true"] > &::after {
         left: 0;
         right: 0;
-        border-bottom-color: $color-black-90;
+        border-bottom-color: $color-black;
       }
 
       &:focus,
@@ -173,7 +173,7 @@
 
         &:hover,
         &:focus {
-          background-color: $color-black-10;
+          background-color: rgba($color-black, 10%);
         }
       }
 

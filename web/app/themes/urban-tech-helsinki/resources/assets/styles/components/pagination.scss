@@ -27,7 +27,7 @@ a.page-numbers {
   height: 40px;
   line-height: 1;
   text-align: center;
-  color: $color-black-90;
+  color: $color-black;
   text-decoration: none;
   margin-left: $spacing-xs / 2;
   margin-right: $spacing-xs / 2;
@@ -42,12 +42,12 @@ a.page-numbers {
 }
 
 .page-numbers.current {
-  border: solid 2px $color-black-90;
+  border: solid 2px $color-black;
 }
 
 a.page-numbers {
   &:hover,
   &:focus {
-    background-color: $color-black-10;
+    background-color: rgba($color-black, 10%);
   }
 }
