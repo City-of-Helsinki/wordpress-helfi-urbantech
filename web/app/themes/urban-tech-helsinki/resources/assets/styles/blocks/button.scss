@@ -19,14 +19,24 @@
     align-items: center;
     align-content: center;
     border-radius: 0;
-    font-size: 16px;
-    padding: $spacing-layout-2-xs $spacing-layout-s;
-    font-weight: 500;
-    line-height: 1.25;
+    padding: 6px 10px;
+    font-weight: bold;
 
     &:focus {
       outline: solid 3px currentColor;
       outline-offset: 2px;
+    }
+
+    &.has-white-color:hover {
+      color: black !important;
+      border-color: white;
+      background-color: white;
+    }
+
+    &:not(.has-text-color):hover { // black color
+      color: white !important;
+      border-color: black;
+      background-color: black;
     }
   }
 }
