@@ -1,3 +1,7 @@
+import {
+  unregisterBlockStyle,
+  registerBlockStyle,
+} from '@wordpress/blocks';
 import '@wordpress/edit-post';
 import domReady from '@wordpress/dom-ready';
 
@@ -59,4 +63,10 @@ wp.hooks.addFilter('blocks.registerBlockType', 'pw-examples/exclude-blocks', fun
 });
 
 domReady(() => {
+  unregisterBlockStyle('core/button', 'fill');
+  registerBlockStyle('core/button', {
+    name: 'outline',
+    label: 'Outline',
+    isDefault: true,
+  });
 });
