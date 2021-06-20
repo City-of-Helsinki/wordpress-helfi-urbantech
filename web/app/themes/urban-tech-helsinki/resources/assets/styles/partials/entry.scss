@@ -1,5 +1,11 @@
 .entry-content {
-  font-size: $fontsize-body-l;
+  font-size: $fontsize-body-mobile;
+  line-height: $lineheight-body-mobile;
+
+  @include mq($from: medium) {
+    font-size: $fontsize-body;
+    line-height: $lineheight-body;
+  }
 
   > *:first-child {
     margin-top: 0;
@@ -214,7 +220,7 @@
   time.updated {
     display: block;
     margin-bottom: $spacing-s;
-    font-size: $fontsize-heading-m;
+    font-size: $fontsize-heading-3;
     font-weight: bold;
   }
 

@@ -104,12 +104,6 @@ $spacing-2-xl: 3.0rem; // 48px
 $spacing-3-xl: 3.5rem; // 56px
 $spacing-4-xl: 4rem; // 64px
 $spacing-5-xl: 4.5rem; // 72px
-$fontsize-heading-xl: 3.25rem; // 52px
-$fontsize-heading-l: 2.25rem; // 36px
-$fontsize-heading-m: 1.5rem; // 24px
-$fontsize-heading-s: 1.25rem; // 20px
-$fontsize-heading-xs: 1.125rem; // 18px
-$fontsize-heading-xxs: 1rem; // 16px
 $fontsize-body-s: 0.875rem; // 14px
 $fontsize-body-m: 1rem; // 16px
 $fontsize-body-l: 1.125rem; // 18px
@@ -121,6 +115,30 @@ $lineheight-xl: 1.75;
 
 $font-default: 'Poppins', sans-serif;
 $font-heading: 'BebasNeue', serif;
+
+$fontsize-heading-1: 120px;
+$fontsize-heading-1-mobile: 85px;
+$lineheight-heading-1: 97px;
+$lineheight-heading-1-mobile: 69px;
+
+$fontsize-heading-2: 57px;
+$fontsize-heading-2-mobile: 51px;
+$lineheight-heading-2: 48px;
+$lineheight-heading-2-mobile: 43px;
+
+$fontsize-heading-3: 40px;
+$fontsize-heading-3-mobile: 36px;
+$lineheight-heading-3: 34px;
+$lineheight-heading-3-mobile: 30px;
+
+$fontsize-heading-4: 24px;
+$fontsize-heading-5: 20px;
+$fontsize-heading-6: 18px;
+
+$fontsize-body: 18px;
+$fontsize-body-mobile: 16px;
+$lineheight-body: 20px;
+$lineheight-body-mobile: 18px;
 
 $is-frontend: true;
 
@@ -152,7 +170,7 @@ $font-sizes: (
 );
 
 $primary-color: map-get($color-palette, 'primary');
-$global-font-size: 100%;
+$global-font-size: $fontsize-body;
 $global-width: 1200px;
 $content-width-max: 674px;
 

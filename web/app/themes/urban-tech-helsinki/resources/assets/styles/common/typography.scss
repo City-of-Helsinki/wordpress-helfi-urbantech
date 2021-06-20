@@ -1,3 +1,16 @@
+body {
+  font-family: $font-default;
+  font-size: $fontsize-body-mobile;
+  line-height: $lineheight-body-mobile;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include mq($from: medium) {
+    font-size: $fontsize-body;
+    line-height: $lineheight-body;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -30,51 +43,39 @@ h6 {
 }
 
 h1 {
-  font-size: $fontsize-heading-l;
-
-  [lang="ru-RU"] & {
-    font-size: 2rem;
-  }
+  font-size: $fontsize-heading-1-mobile;
 
   @include mq($from: medium) {
-    font-size: $fontsize-heading-xl;
-
-    [lang="ru-RU"] & {
-      font-size: 3rem;
-    }
+    font-size: $fontsize-heading-1;
   }
 }
 
 h2 {
-  font-size: $fontsize-heading-m;
+  font-size: $fontsize-heading-2-mobile;
 
   @include mq($from: medium) {
-    font-size: $fontsize-heading-l;
-
-    [lang="ru-RU"] & {
-      font-size: 2rem;
-    }
+    font-size: $fontsize-heading-2;
   }
 }
 
 h3 {
-  font-size: $fontsize-heading-s;
+  font-size: $fontsize-heading-3-mobile;
 
   @include mq($from: medium) {
-    font-size: $fontsize-heading-m;
+    font-size: $fontsize-heading-3;
   }
 }
 
 h4 {
-  font-size: $fontsize-heading-s;
+  font-size: $fontsize-heading-4;
 }
 
 h5 {
-  font-size: $fontsize-heading-xs;
+  font-size: $fontsize-heading-5;
 }
 
 h6 {
-  font-size: $fontsize-heading-xxs;
+  font-size: $fontsize-heading-6;
 }
 
 blockquote {
@@ -86,8 +87,6 @@ blockquote {
 p {
   margin-block-start: 0;
   margin-block-end: $spacing-m;
-  font-size: $fontsize-body-l;
-  line-height: $lineheight-l;
 
   &.description {
     font-weight: bold;
