@@ -1,7 +1,5 @@
 @import '~@wordpress/base-styles/breakpoints';
 
-$content-overlap-amount-mobile: 32;
-
 .wp-block-media-text {
   // Force 50% ratio between sides on non-mobile.
   @media (min-width: #{$break-small + 1}) {
@@ -9,6 +7,14 @@ $content-overlap-amount-mobile: 32;
 
     &.has-media-on-the-right {
       grid-template-columns: 50% 1fr !important;
+    }
+  }
+
+  & &__content {
+    padding: 20px 15px 40px 15px;
+
+    @media (min-width: #{$break-small + 1}) {
+      padding: 64px 120px 64px 40px;
     }
   }
 }
