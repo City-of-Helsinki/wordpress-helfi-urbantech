@@ -22,7 +22,7 @@
         margin-top: 0;
       }
 
-      &.alignfull.has-background + .alignfull.has-background {
+      &.alignfull + .alignfull {
         margin-top: #{-1 * $margin};
       }
     }
