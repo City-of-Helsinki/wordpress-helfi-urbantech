@@ -41,7 +41,7 @@ $is-frontend: false;
 
 .editor-styles-wrapper > * {
   font-size: $fontsize-body-l;
-  font-family: $font-default, Georgia, "Times", "Times New Roman", serif;
+  font-family: $font-default;
 
   // Style page title
   .edit-post-visual-editor__post-title-wrapper {

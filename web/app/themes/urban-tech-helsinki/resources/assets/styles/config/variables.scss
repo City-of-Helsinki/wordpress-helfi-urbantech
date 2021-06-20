@@ -114,11 +114,13 @@ $fontsize-body-s: 0.875rem; // 14px
 $fontsize-body-m: 1rem; // 16px
 $fontsize-body-l: 1.125rem; // 18px
 $fontsize-body-xl: 1.25rem; // 20px
-$font-default: HelsinkiGrotesk, Arial, sans-serif;
 $lineheight-s: 1;
 $lineheight-m: 1.2;
 $lineheight-l: 1.5;
 $lineheight-xl: 1.75;
+
+$font-default: 'Poppins', sans-serif;
+$font-heading: 'BebasNeue', serif;
 
 $is-frontend: true;
 
