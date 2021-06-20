@@ -1,11 +1,40 @@
 .wp-block-cover {
-  .wp-block-cover__inner-container {
-    color: inherit;
-    text-align: inherit;
-    max-width: $content-width-max;
+  justify-content: flex-start;
+  padding: 0;
+
+  @include mq($until: medium) {
+    align-items: flex-end;
+    padding-bottom: 100%;
+    background-position: top !important;
+    background-size: auto 100vw;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+
+    &.has-background-dim::before {
+      display: none;
+    }
   }
 
-  &:not(.has-background):not(.has-background-dim) {
-    color: $color-white;
+  .wp-block-cover__inner-container {
+    padding: 20px 15px;
+    text-align: inherit;
+    color: inherit;
+
+    @include mq($until: medium) {
+      margin-top: 100% !important;
+      margin-bottom: -100% !important;
+      width: 100% !important;
+      background-color: white;
+      color: black;
+
+      .has-white-color {
+        color: black !important;
+      }
+    }
+
+    @include mq($from: medium) {
+      padding: 62px 40px 62px 40px;
+      max-width: 480px;
+    }
   }
 }
