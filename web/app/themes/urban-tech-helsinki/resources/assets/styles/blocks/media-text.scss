@@ -17,4 +17,18 @@
       padding: 64px 120px 64px 40px;
     }
   }
+
+  @media (max-width: $break-small) {
+    // Move the content part to be always below the image on mobile regardless
+    // of direction.
+    &.has-media-on-the-right {
+      .wp-block-media-text__media {
+        grid-row: 1 !important;
+      }
+
+      .wp-block-media-text__content {
+        grid-row: 2 !important;
+      }
+    }
+  }
 }
