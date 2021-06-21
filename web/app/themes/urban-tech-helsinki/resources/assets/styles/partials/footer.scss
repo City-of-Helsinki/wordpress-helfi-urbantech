@@ -3,7 +3,7 @@
 
   position: relative;
   padding: $spacing-xl $spacing-xl $spacing-m $spacing-xl;
-  background-color: blue;
+  background-color: black;
   color: white;
 
   @include mq($from: $bp) {
@@ -334,11 +334,5 @@
         }
       }
     }
-  }
-
-  .footer__menu + .footer__contact,
-  .footer__contact + .footer__fineprint,
-  .footer__menu + .footer__fineprint {
-    border-top: 1px solid white;
   }
 }
