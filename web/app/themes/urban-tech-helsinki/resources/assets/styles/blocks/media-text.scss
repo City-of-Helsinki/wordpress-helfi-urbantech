@@ -14,7 +14,11 @@
     padding: 20px 15px 40px 15px;
 
     @include mq($from: large) {
-      padding: 64px 120px 64px 40px;
+      padding: 64px 40px 64px 40px;
+
+      > *:not(h1) {
+        max-width: calc(100% - 120px);
+      }
     }
   }
 
@@ -24,12 +28,12 @@
     // Move the content part to be always below the image on mobile regardless
     // of direction.
     .wp-block-media-text__media {
-      grid-column: 1;
+      grid-column: 1 !important;
       grid-row: 1 !important;
     }
 
     .wp-block-media-text__content {
-      grid-column: 1;
+      grid-column: 1 !important;
       grid-row: 2 !important;
     }
   }
