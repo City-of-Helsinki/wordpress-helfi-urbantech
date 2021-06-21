@@ -1,4 +1,10 @@
 .wp-block-column {
+  padding: 30px;
+  margin-bottom: 0 !important;
+  flex-basis: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+
   // column blocks can contain other aligned blocks.
   .alignwide,
   .alignfull {
@@ -7,9 +13,19 @@
     margin-right: 0;
   }
 
+  &:not(:first-child) {
+    margin-left: 0 !important;
+  }
+
+  &:empty {
+    display: none;
+  }
+
   // On mobile stacked columns need gutters.
   // Note breakpoint is taken from wp core.
-  @media (max-width: 782px) {
-    margin-bottom: $spacing-4-xs;
+  @media (min-width: 600px) {
+    &:empty {
+      display: block;
+    }
   }
 }
