@@ -61,8 +61,6 @@ $container-width-xl: 1200px;
 // $color-tram-light: #dff7eb;
 // $color-tram-medium-light: #a3e3c2;
 // $color-tram-dark: #006631;
-$color-black: #000000;
-$color-white: #ffffff;
 // $color-black-5: #f1f1f1;
 // rgba($color-black, 10%): #e5e5e5;
 // $color-black-20: #cccccc;
@@ -112,6 +110,17 @@ $lineheight-s: 1;
 $lineheight-m: 1.2;
 $lineheight-l: 1.5;
 $lineheight-xl: 1.75;
+
+$color-black: #000000;
+$color-white: #ffffff;
+$color-liliac: #c491fe;
+$color-brightlightblue: #30e0ff;
+$color-orangish: #ff8547;
+$color-weirdgreen: #43d09d;
+$color-bubblegumpink: #ff99e5;
+$color-lightblue: #6dcff6;
+$color-sunfloweryellow: #ffe400;
+$color-greyishbrown: #3c3c3c;
 
 $font-default: 'Poppins', sans-serif;
 $font-heading: 'BebasNeue', serif;
@@ -164,6 +173,14 @@ $container-margins: (
 $color-palette: (
   'black': $color-black,
   'white': $color-white,
+  'liliac': $color-liliac,
+  'brightlightblue': $color-brightlightblue,
+  'orangish': $color-orangish,
+  'weirdgreen': $color-weirdgreen,
+  'bubblegumpink': $color-bubblegumpink,
+  'lightblue': $color-lightblue,
+  'sunfloweryellow': $color-sunfloweryellow,
+  'greyishbrown': $color-greyishbrown,
 );
 
 $font-sizes: (
