@@ -1,7 +1,6 @@
 <div class="site-header">
   <a class="site-header__logo" href="{{ home_url('/') }}" rel="home" aria-label="{{ __('Go to frontpage', 'hds') }}">
     <img src="{{ \Roots\Asset('images/logo.png') }}" alt="{{ $site_name }}" />
-    @svg('images/logo.png', '', ['width' => 67, 'height' => 31])
   </a>
 
   @if ($search_enabled)
