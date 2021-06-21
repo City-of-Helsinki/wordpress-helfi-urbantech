@@ -28,5 +28,6 @@
 
   <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
     <exclude-pattern>RoboFile.php</exclude-pattern>
+    <exclude name="Generic.Files.LineEndings.InvalidEOLChar" />
   </rule>
 </ruleset>
