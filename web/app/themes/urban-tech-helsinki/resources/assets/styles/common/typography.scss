@@ -5,7 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @include mq($from: medium) {
+  @include mq($from: large) {
     font-size: $fontsize-body;
     line-height: $lineheight-body;
   }
@@ -45,7 +45,7 @@ h1 {
   font-size: $fontsize-heading-1-mobile;
   line-height: $lineheight-heading-1-mobile;
 
-  @include mq($from: medium) {
+  @include mq($from: large) {
     font-size: $fontsize-heading-1;
     line-height: $lineheight-heading-1;
   }
@@ -55,7 +55,7 @@ h2 {
   font-size: $fontsize-heading-2-mobile;
   line-height: $lineheight-heading-2-mobile;
 
-  @include mq($from: medium) {
+  @include mq($from: large) {
     font-size: $fontsize-heading-2;
     line-height: $lineheight-heading-2;
   }
@@ -65,7 +65,7 @@ h3 {
   font-size: $fontsize-heading-3-mobile;
   line-height: $lineheight-heading-3-mobile;
 
-  @include mq($from: medium) {
+  @include mq($from: large) {
     font-size: $fontsize-heading-3;
     line-height: $lineheight-heading-3;
   }

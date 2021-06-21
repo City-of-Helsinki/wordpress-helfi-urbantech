@@ -2,7 +2,7 @@
   justify-content: flex-start;
   padding: 0;
 
-  @include mq($until: medium) {
+  @include mq($until: large) {
     align-items: flex-end;
     padding-bottom: 50%;
     background-position: top !important;
@@ -20,7 +20,7 @@
     text-align: inherit;
     color: inherit;
 
-    @include mq($until: medium) {
+    @include mq($until: large) {
       margin-top: 50% !important;
       margin-bottom: -50% !important;
       width: 100% !important;
@@ -32,7 +32,7 @@
       }
     }
 
-    @include mq($from: medium) {
+    @include mq($from: large) {
       padding: 62px 40px 62px 40px;
       max-width: 480px;
     }

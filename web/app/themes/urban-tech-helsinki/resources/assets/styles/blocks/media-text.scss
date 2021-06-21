@@ -2,7 +2,7 @@
 
 .wp-block-media-text {
   // Force 50% ratio between sides on non-mobile.
-  @media (min-width: #{$break-small + 1}) {
+  @include mq($from: large) {
     grid-template-columns: 1fr 50% !important;
 
     &.has-media-on-the-right {
@@ -13,22 +13,24 @@
   & &__content {
     padding: 20px 15px 40px 15px;
 
-    @media (min-width: #{$break-small + 1}) {
+    @include mq($from: large) {
       padding: 64px 120px 64px 40px;
     }
   }
 
-  @media (max-width: $break-small) {
+  @include mq($until: large) {
+    grid-template-columns: 100% !important;
+
     // Move the content part to be always below the image on mobile regardless
     // of direction.
-    &.has-media-on-the-right {
-      .wp-block-media-text__media {
-        grid-row: 1 !important;
-      }
+    .wp-block-media-text__media {
+      grid-column: 1;
+      grid-row: 1 !important;
+    }
 
-      .wp-block-media-text__content {
-        grid-row: 2 !important;
-      }
+    .wp-block-media-text__content {
+      grid-column: 1;
+      grid-row: 2 !important;
     }
   }
 }
