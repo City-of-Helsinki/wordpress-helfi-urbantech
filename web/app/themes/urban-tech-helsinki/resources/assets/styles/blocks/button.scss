@@ -6,7 +6,7 @@
   border-radius: 0;
 
   &.is-style-outline {
-    background-color: transparent;
+    background: transparent;
 
     .wp-block-button__link {
       border-color: currentColor;
@@ -27,16 +27,20 @@
       outline-offset: 2px;
     }
 
+    &:hover {
+      text-decoration: none;
+    }
+
     &.has-white-color:hover {
       color: black !important;
       border-color: white;
-      background-color: white;
+      background: white;
     }
 
     &:not(.has-text-color):hover { // black color
       color: white !important;
       border-color: black;
-      background-color: black;
+      background: black;
     }
   }
 }

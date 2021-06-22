@@ -13,6 +13,10 @@ body {
 
 .highlight {
   display: inline;
+
+  a:hover & {
+    background: inherit;
+  }
 }
 
 @each $color-name, $color-value in $color-palette {
@@ -52,8 +56,15 @@ h6 {
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
-      background-color: unset;
+      text-decoration: none;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 10%,
+        $color-lightblue 10%,
+        $color-lightblue 80%,
+        transparent 80%
+      );
     }
   }
 }
@@ -130,11 +141,11 @@ a {
   color: inherit;
 
   &:hover {
-    background-color: #f2f2fc;
+    text-decoration: underline;
   }
 
   &:focus {
-    outline: auto 3px blue;
+    outline: auto 3px currentColor;
     outline-offset: 2px;
   }
 }
