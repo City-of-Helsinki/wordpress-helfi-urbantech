@@ -11,6 +11,23 @@ body {
   }
 }
 
+.highlight {
+  display: inline;
+}
+
+@each $color-name, $color-value in $color-palette {
+  [data-color=#{$color-name}].highlight {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 10%,
+      $color-value 10%,
+      $color-value 80%,
+      transparent 80%
+    );
+  }
+}
+
 h1,
 h2,
 h3,

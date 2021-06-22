@@ -2,8 +2,74 @@ import {
   unregisterBlockStyle,
   registerBlockStyle,
 } from '@wordpress/blocks';
+import {
+  RichTextToolbarButton,
+} from '@wordpress/block-editor'
+import {
+  registerFormatType,
+  applyFormat,
+  toggleFormat,
+} from '@wordpress/rich-text'
 import '@wordpress/edit-post';
 import domReady from '@wordpress/dom-ready';
+import {Popover, SelectControl} from '@wordpress/components'
+import colorPalette from '../palette.json'
+
+registerFormatType('urban-tech-helsinki/highlight', {
+  title: 'Highlight',
+	tagName: 'span',
+	className: 'highlight',
+	attributes: {
+		color: 'data-color',
+	},
+	edit( { isActive, value, onChange, activeAttributes } ) {
+		const onToggle = () => {
+			onChange(toggleFormat(value, {
+        type: 'urban-tech-helsinki/highlight',
+      }));
+		};
+		return ([
+      <RichTextToolbarButton
+        icon="editor-underline"
+        title="Highlight"
+        onClick={ onToggle }
+        isActive={ isActive }
+        shortcutType="primary"
+        shortcutCharacter="u"
+      />,
+      isActive && (
+        <Popover
+          position="bottom center"
+          headerTitle="Highlight color"
+        >
+          <SelectControl
+            label="Color name"
+            value={activeAttributes.color || ''}
+            options={[
+              {
+                label: 'Select color',
+                value: '',
+              },
+              ...colorPalette.map(color => ({
+                label: color.name,
+                value: color.slug,
+              })),
+            ]}
+            onChange={newColor => {
+              onChange(applyFormat(value, {
+                type: 'urban-tech-helsinki/highlight',
+                attributes: {
+                  color: newColor,
+                },
+              }))
+            }}
+          />
+        </Popover>
+      ),
+    ]);
+
+	},
+})
 
 var excludeBlockTypes = [
   'core/archives',
