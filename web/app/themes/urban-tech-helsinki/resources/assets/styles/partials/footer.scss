@@ -10,18 +10,6 @@
     padding: $spacing-m $spacing-m $spacing-2-xs $spacing-m;
   }
 
-  // Koro effect
-  &::before {
-    content: ' ';
-    position: absolute;
-    top: -23px;
-    left: 0;
-    width: 100%;
-    height: $footer-koro-height;
-    background-repeat: repeat-x;
-    background-image: svg-load('./images/koro-basic.svg', fill='#0000bf');
-  }
-
   .footer {
     max-width: $global-width;
     margin-left: auto;

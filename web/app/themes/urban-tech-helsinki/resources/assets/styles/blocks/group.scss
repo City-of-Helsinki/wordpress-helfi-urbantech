@@ -1,6 +1,4 @@
 .wp-block-group {
-  $basicKoroHeight: 25px;
-  $pulseKoroHeight: 50px;
 
   &.alignfull .wp-block-group__inner-container {
     max-width: $content-width-max;
@@ -87,82 +85,5 @@
         }
       }
     }
-  }
-
-  &[class*='is-style-koro-'] {
-    position: relative;
-
-    // Make more space so that spacing between blocks is preserved despite the
-    // effect.
-
-    &.is-style-koro-top-basic {
-      margin-top: calc(#{$spacing-2-xl} + #{$basicKoroHeight});
-    }
-
-    &.is-style-koro-top-pulse {
-      margin-top: calc(#{$spacing-2-xl} + #{$pulseKoroHeight});
-    }
-
-    .alignfull.has-background + & {
-      margin-top: 0;
-    }
-
-    @include breakpoint-value($block-margins) {
-      $margin: $-bp-value;
-
-      &.is-style-koro-top-basic {
-        margin-top: calc(#{$margin} + #{$basicKoroHeight});
-      }
-
-      &.is-style-koro-top-pulse {
-        margin-top: calc(#{$margin} + #{$pulseKoroHeight});
-      }
-    }
-
-    &::before {
-      content: "";
-      z-index: 10;
-      position: absolute;
-      left: 0;
-      right: 0;
-      width: 100%;
-      background-repeat: repeat-x;
-      pointer-events: none;
-    }
-  }
-
-  &[class*='is-style-koro-top-'] {
-    &::before {
-      top: 1px;
-      transform: translateY(-100%);
-    }
-  }
-
-  &.is-style-koro-top-basic {
-    &::before {
-      height: $basicKoroHeight;
-    }
-    @each $color-name, $color-value in $color-palette {
-      &.has-#{$color-name}-background-color::before {
-        background-image: svg-load('./images/koro-basic.svg', fill=$color-value);
-      }
-    }
-  }
-
-  &.is-style-koro-top-pulse {
-    &::before {
-      height: 50px;
-    }
-    @each $color-name, $color-value in $color-palette {
-      &.has-#{$color-name}-background-color::before {
-        background-image: svg-load('./images/koro-pulse.svg', fill=$color-value);
-      }
-    }
-  }
-
-  &.is-style-box {
-    padding: $spacing-l $spacing-m;
-    margin-top: $spacing-m;
-    margin-bottom: $spacing-m;
   }
 }
