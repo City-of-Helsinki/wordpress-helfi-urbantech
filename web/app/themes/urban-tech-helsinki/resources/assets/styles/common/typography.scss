@@ -43,6 +43,10 @@ h6 {
   margin-block-start: 0;
   margin-block-end: $spacing-15;
 
+  &:last-child {
+    margin-block-end: 0;
+  }
+
   // increase specificity to override inline editor styles
   @if not $is-frontend {
     :root & {

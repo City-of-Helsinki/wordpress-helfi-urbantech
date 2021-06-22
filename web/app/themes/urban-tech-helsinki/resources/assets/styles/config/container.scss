@@ -1,6 +1,6 @@
 :root {
   --container-width: #{$container-width-xs};
-  --content-width: calc(100% - #{2 * $spacing-s});
+  --content-width: calc(100% - 15px);
   --grid-gutter: 24px;
   --grid-columns: 4;
   --alignwide-width: 100%;
