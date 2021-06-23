@@ -14,6 +14,7 @@
   }
 
   &__link {
+    position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +22,9 @@
     border-radius: 0;
     padding: 6px 10px;
     font-weight: bold;
+    overflow: hidden;
+    transition: color 0.25s ease-in-out,
+      border-color 0.25s ease-in-out;
 
     &:focus {
       outline: solid 3px currentColor;
@@ -31,16 +35,43 @@
       text-decoration: none;
     }
 
-    &.has-white-color:hover {
-      color: black !important;
-      border-color: white;
+    &::before {
+      content: '';
+      margin-right: auto;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      position: absolute;
       background: white;
+      z-index: -1;
+      pointer-events: none;
+      transition: left 0.25s ease-in-out;
     }
 
-    &:not(.has-text-color):hover { // black color
-      color: white !important;
-      border-color: black;
-      background: black;
+    &:hover::before {
+      left: 0;
+    }
+
+    &.has-white-color {
+      &::before {
+        background: white;
+      }
+
+      &:hover {
+        color: black !important;
+        border-color: white;
+      }
+    }
+
+    &:not(.has-text-color) { // black color
+      &::before {
+        background: black;
+      }
+
+      &:hover {
+        color: white !important;
+        border-color: black;
+      }
     }
   }
 }
