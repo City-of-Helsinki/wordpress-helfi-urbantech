@@ -28,4 +28,12 @@
       display: block;
     }
   }
+
+  // Show two columns instead of one on 480px+ mobile, and use 50% width instead
+  // of the default since we've removed margins.
+  @media (min-width: 480px) and (max-width: 781px) {
+    &:not(:only-child) {
+      flex-basis: 50% !important;
+    }
+  }
 }
