@@ -28,6 +28,9 @@
 }
 
 .site__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
   background-color: $color-white;
   z-index: 100;
 
