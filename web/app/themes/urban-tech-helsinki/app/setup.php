@@ -172,4 +172,16 @@ add_action('widgets_init', function () {
         'before_title' => '<h3>',
         'after_title' => '</h3>'
     ];
+    register_sidebar([
+        'name' => __('Footer: Logos', 'uht'),
+        'id' => 'footer-logos'
+    ] + $config);
+    register_sidebar([
+        'name' => __('Footer: Socials', 'uht'),
+        'id' => 'footer-socials'
+    ] + $config);
+    register_sidebar([
+        'name' => __('Footer: Fine print', 'uht'),
+        'id' => 'footer-fineprint'
+    ] + $config);
 });
