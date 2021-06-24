@@ -40,6 +40,27 @@
         left: 0;
       }
     }
+
+    &:last-child {
+      &::before {
+        background: black;
+      }
+
+      .site-navigation__link {
+        border: 2px solid black;
+        padding: 6px 10px;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      &:hover {
+        color: white;
+
+        .site_navigation__link {
+          border-color: black;
+        }
+      }
+    }
   }
 
   &__link {
@@ -51,6 +72,8 @@
     z-index: 2;
     font-size: 20px;
     line-height: 20px;
+    transition: color 0.25s ease-in-out,
+      border-color 0.25s ease-in-out;
 
     &:hover {
       text-decoration: none;
@@ -62,31 +85,37 @@
   }
 }
 
-@include mq($from: large) {
-  .site-navigation {
-    flex-direction: row;
-    flex-wrap: wrap;
+// Temporarily for both desktop and mobile.
+// stylelint-disable no-duplicate-selectors
 
-    &__item {
-      position: relative;
-      display: flex;
-      font-weight: bold;
-      white-space: nowrap;
+// @include mq($from: large) {
+.site-navigation {
+  flex-direction: row;
+  flex-wrap: wrap;
 
-      // Items are horizontal
-      &:not(:last-child) {
-        margin-right: $spacing-l;
-      }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
 
-      .is-level-2 {
-        width: 100%;
-        margin-right: 0;
-      }
+    // Items are horizontal
+    &:not(:last-child) {
+      margin-right: $spacing-l;
     }
 
-    &__link {
-      display: inline-block;
-      padding: 5px;
+    .is-level-2 {
+      width: 100%;
+      margin-right: 0;
     }
   }
+
+  &__link {
+    display: inline-block;
+    padding: 5px;
+  }
+  // }
 }
