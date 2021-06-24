@@ -10,6 +10,10 @@
     background-repeat: no-repeat;
     background-origin: content-box;
 
+    &__image-background {
+      height: 50vw !important;
+    }
+
     &.has-background-dim::before {
       display: none;
     }
