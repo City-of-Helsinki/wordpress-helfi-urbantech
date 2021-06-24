@@ -30,6 +30,7 @@
 .site__header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
   padding: 25px;
   background-color: $color-white;
   z-index: 100;
