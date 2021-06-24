@@ -34,6 +34,17 @@
       .has-white-color {
         color: black !important;
       }
+
+      .wp-block-button__link.has-white-color {
+        &::before {
+          background: black;
+        }
+
+        &:hover {
+          color: white !important;
+          border-color: black;
+        }
+      }
     }
 
     @include mq($from: large) {
