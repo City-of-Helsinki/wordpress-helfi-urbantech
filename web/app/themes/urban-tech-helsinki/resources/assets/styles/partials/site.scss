@@ -29,9 +29,6 @@
 
 .site__header {
   display: flex;
-  position: fixed;
-  left: 0;
-  right: 0;
   justify-content: space-between;
   padding: 25px;
   background-color: $color-white;
@@ -49,9 +46,5 @@
 }
 
 .site__content {
-  padding-top: 108px;
-
-  @include mq($from: large) {
-    padding-top: 165px;
-  }
+  //
 }
