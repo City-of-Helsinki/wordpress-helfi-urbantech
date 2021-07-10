@@ -34,18 +34,9 @@
   padding: 25px;
   background-color: $color-white;
   z-index: 100;
+  flex-wrap: wrap;
 
-  &.is-active {
-    height: var(--app-height, 100vh);
-    display: grid;
-    grid-template-rows: auto auto 1fr;
-    grid-template-columns: 1fr;
-    position: fixed;
-    width: 100%;
-    overflow-y: scroll;
+  @include mq($from: large) {
+    flex-wrap: nowrap;
   }
-}
-
-.site__content {
-  //
 }

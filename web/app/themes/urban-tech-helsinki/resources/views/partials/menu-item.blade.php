@@ -18,21 +18,5 @@
     role="menuitem"
   >
     {!! esc_html($item->label) !!}
-
-    @if ($item->children)
-      <span class="{{ $name }}__submenu-trigger hds-icon hds-icon--angle-down" aria-hidden="true"></span>
-    @endif
   </a>
-
-  @if ($item->children)
-    <ul
-      id="submenu-{{ $item->slug }}" class="{{ $name }}__submenu {{ $item->active ? 'is-active' : '' }}"
-      aria-label="{!! esc_attr($item->label) !!}"
-      role="menu"
-    >
-      @foreach ($item->children as $child)
-        @include('partials.menu-item', ['item' => $child, 'name' => $name, 'level' => $level + 1])
-      @endforeach
-    </ul>
-  @endif
 </li>

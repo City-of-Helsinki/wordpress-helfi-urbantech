@@ -3,21 +3,18 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  width: 100%;
 
-  @include ie11 {
-    max-width: $global-width;
+  @include mq($from: large) {
+    width: auto;
   }
 
   &__logo {
+    flex-grow: 1;
     margin-right: $spacing-m;
 
-    [dir="rtl"] & {
-      margin-left: $spacing-m;
-      margin-right: 0;
-    }
-
-    &:hover {
-      background-color: transparent;
+    @include mq($from: large) {
+      flex-grow: 0;
     }
 
     img {
@@ -35,58 +32,11 @@
     }
   }
 
-  &__name {
-    // push remaining columns to the right
-    flex: 1 0 auto;
-
-    > h5 {
-      margin-bottom: 0;
-    }
-  }
-
-  &__search {
-    display: none;
-
-    @include mq($from: large) {
-      display: block;
-    }
-  }
-
   &__hamburger-button {
-    // display: block;
-    display: none; // temporarily hidden
-    margin-left: $spacing-m;
+    display: block;
 
     @include mq($from: large) {
       display: none;
-    }
-  }
-
-  // When navigation is activated on mobile
-  .is-active & {
-    .site-header__search {
-      display: block;
-      padding-top: $spacing-m;
-      padding-left: ($spacing-m - $spacing-s);
-      padding-right: ($spacing-m - $spacing-s);
-      padding-bottom: calc(#{$spacing-m} - 10px); // custom padding on .site-header
-      margin-top: 10px; // site-header custom padding
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 100vw;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 0;
-        border-top: solid 1px rgba($color-black, 10%);
-      }
-
-      // Move last and take up whole row
-      order: 5;
-      flex-basis: 100%;
     }
   }
 }
