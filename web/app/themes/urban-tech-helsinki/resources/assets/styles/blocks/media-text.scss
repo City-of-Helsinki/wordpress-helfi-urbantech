@@ -1,6 +1,10 @@
 @import '~@wordpress/base-styles/breakpoints';
 
 .wp-block-media-text {
+  h1 {
+    word-break: normal;
+  }
+
   // Force 50% ratio between sides on non-mobile.
   @include mq($from: large) {
     grid-template-columns: 1fr 50% !important;
