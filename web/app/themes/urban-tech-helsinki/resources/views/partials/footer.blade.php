@@ -4,7 +4,7 @@
       @php(dynamic_sidebar('footer-logos'))
     </div>
     <div class="footer__social">
-      @php(dynamic_sidebar('footer-social'))
+      @php(dynamic_sidebar('footer-socials'))
     </div>
     <div class="footer__fineprint">
       @php(dynamic_sidebar('footer-fineprint'))
