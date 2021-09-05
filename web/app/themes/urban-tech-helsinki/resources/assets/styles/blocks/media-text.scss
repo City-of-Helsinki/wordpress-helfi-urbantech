@@ -26,33 +26,66 @@
     }
   }
 
-  @include mq($until: large) {
-    grid-template-columns: 100% !important;
+  &:not(.wp-block-media-text--contact) {
+    @include mq($until: large) {
+      grid-template-columns: 100% !important;
 
-    // Move the content part to be always below the image on mobile regardless
-    // of direction.
-    .wp-block-media-text__media {
-      grid-column: 1 !important;
-      grid-row: 1 !important;
+      // Move the content part to be always below the image on mobile regardless
+      // of direction.
+      .wp-block-media-text__media {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+      }
+
+      .wp-block-media-text__content {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+      }
     }
+    @include mq($from: large) {
+      .wp-block-media-text__media {
+        position: relative;
+        height: 100%;
+        min-height: 640px;
 
-    .wp-block-media-text__content {
-      grid-column: 1 !important;
-      grid-row: 2 !important;
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
 
-  @include mq($from: large) {
-    &__media {
-      position: relative;
-      height: 100%;
-      min-height: 640px;
+  &.wp-block-media-text--contact {
+    @include mq($until: small) {
+      grid-template-columns: 100% !important;
 
-      img {
-        position: absolute;
-        width: 100%;
+      // Move the content part to be always below the image on mobile regardless
+      // of direction.
+      .wp-block-media-text__media {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+      }
+
+      .wp-block-media-text__content {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+      }
+    }
+    @include mq($from: small) {
+      .wp-block-media-text__media {
+        position: relative;
         height: 100%;
-        object-fit: cover;
+        min-height: 640px;
+
+        img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
   }

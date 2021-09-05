@@ -1,6 +1,6 @@
 <div class="{{ esc_attr($block->classes) }} @if (count($contacts) > 1) has-multiple-contacts @endif">
   @foreach ($contacts as $contact)
-    <div class="wp-block-media-text alignfull is-stacked-on-mobile">
+    <div class="wp-block-media-text alignfull is-stacked-on-mobile wp-block-media-text--contact">
       <figure class="wp-block-media-text__media">
         {!!get_the_post_thumbnail($contact, 'xxlarge')!!}
       </figure>

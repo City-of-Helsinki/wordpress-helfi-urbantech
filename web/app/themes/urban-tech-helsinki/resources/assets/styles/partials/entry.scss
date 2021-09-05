@@ -2,6 +2,10 @@
   font-size: $fontsize-body-mobile;
   line-height: $lineheight-body-mobile;
 
+  > .wp-block-group {
+    margin-left: 0;
+  }
+
   @include mq($from: medium) {
     font-size: $fontsize-body;
     line-height: $lineheight-body;
@@ -70,11 +74,33 @@
 }
 
 .entry-header {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: var(--contentwide-width);
-  margin-top: $spacing-m;
+  margin-top: 10px;
   margin-bottom: 0;
+
+  > .wp-block-group {
+    max-width: var(--content-width);
+
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @include mq($from: large) {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+  }
+
+  .wp-block-image {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 30px;
+
+    img {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 
   .archive &,
   .post.type-post &,
@@ -95,27 +121,11 @@
       margin-top: 0;
     }
 
-    .wp-block-columns {
-      margin: 0;
-    }
-
-    .wp-block-image {
-      margin: 0;
-    }
-
     figcaption {
       margin-bottom: 0;
       font-style: italic;
       text-align: right;
       color: $color-black;
-    }
-
-    .mobile-koro {
-      display: none;
-    }
-
-    .desktop-koro {
-      display: block;
     }
 
     @include mq($from: large) {
@@ -124,170 +134,24 @@
         padding-bottom: 110px;
       }
     }
-
-    @include mq($until: large) {
-      .wp-block-group.has-background {
-        margin-bottom: $spacing-layout-xs;
-        padding-left: $spacing-layout-2-xs;
-        padding-right: $spacing-layout-2-xs;
-        padding-top: 0;
-        padding-bottom: 0;
-        background-color: transparent !important;
-      }
-
-      .wp-block-column.title-column {
-        margin-left: -$spacing-layout-2-xs;
-        margin-right: -$spacing-layout-2-xs;
-        margin-bottom: 0;
-        padding: $spacing-xl $spacing-layout-2-xs;
-        padding-bottom: calc(#{$spacing-xl} + 50px);
-
-        h1 {
-          margin-bottom: 0;
-        }
-      }
-
-      .wp-block-column.image-column {
-        margin-left: 0;
-        margin-top: -$spacing-l;
-        margin-bottom: 0;
-      }
-
-      .wp-block-columns {
-        flex-wrap: wrap;
-
-        .wp-block-column {
-          flex-basis: 100% !important;
-          flex-grow: 1 !important;
-        }
-      }
-
-      .mobile-koro {
-        display: block;
-        margin-left: -$spacing-layout-2-xs;
-        margin-right: -$spacing-layout-2-xs;
-      }
-
-      .desktop-koro {
-        display: none;
-      }
-    }
   }
 }
 
-.entry-content-and-sidebar {
-  .entry-sidebar .entry-meta {
-    max-width: var(--content-width);
-    margin-left: auto;
-    margin-right: auto;
-  }
+.entry-meta {
+  margin-bottom: 15px;
+  text-align: left;
+  font-family: $font-default;
+  text-transform: uppercase;
 
-  @include mq($from: medium) {
-    display: flex;
-    max-width: var(--alignwide-width);
-    margin-left: auto;
-    margin-right: auto;
-
-    .entry-content {
-      width: 75%;
-      padding-right: $spacing-m;
-    }
-
-    .entry-sidebar {
-      width: 25%;
-      max-width: none;
-    }
+  .category {
+    margin-right: 20px;
+    font-weight: bold;
   }
 }
 
 .entry-title {
-  margin-bottom: $spacing-l;
-}
-
-.entry-title a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.entry-meta {
-  text-align: left;
-  margin-bottom: $spacing-m;
-
-  .byline {
-    margin-left: $spacing-m;
-  }
-
-  time.updated {
-    display: block;
-    margin-bottom: $spacing-s;
-    font-size: $fontsize-heading-3;
-    font-weight: bold;
-  }
-
-  .tags {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: $spacing-l;
-    margin-left: 0;
-
-    li {
-      display: inline-block;
-      margin-right: $spacing-2-xs;
-      margin-bottom: $spacing-2-xs;
-      background-color: blue;
-      border-radius: 40px;
-      padding: $spacing-2-xs $spacing-s;
-
-      a {
-        text-decoration: none;
-        color: blue;
-        font-weight: bold;
-      }
-    }
-  }
-
-  .share {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    margin-left: 0;
-
-    li {
-      display: inline-block;
-      margin-right: $spacing-s;
-      margin-bottom: $spacing-2-xs;
-      white-space: nowrap;
-      line-height: 40px;
-
-      a {
-        text-decoration: none;
-        color: black;
-        font-size: $fontsize-body-l;
-        font-weight: bold;
-        cursor: pointer;
-
-        &:hover {
-          background: none;
-        }
-      }
-
-      .icon {
-        margin-right: $spacing-2-xs;
-        border-radius: 50%;
-        border: 2px solid black;
-        width: 40px;
-        height: 40px;
-        padding: 7.5px;
-      }
-
-      .text {
-        text-decoration: underline;
-      }
-
-      a:hover .text {
-        background-color: #f2f2fc;
-      }
-    }
-  }
+  margin-bottom: 15px !important;
+  font-size: 80px;
+  line-height: 65px;
+  letter-spacing: -2.28px;
 }

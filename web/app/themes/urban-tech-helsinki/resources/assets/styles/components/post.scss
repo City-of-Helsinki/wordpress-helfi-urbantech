@@ -1,0 +1,20 @@
+.post {
+  .entry-content {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include mq($from: large) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    .author {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .post-contacts {
+    margin-top: 40px;
+  }
+}

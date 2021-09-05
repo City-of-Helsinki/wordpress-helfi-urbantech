@@ -5,6 +5,4 @@
     @endif
     <h1 class="entry-title">{!! $title !!}</h1>
   </x-group>
-  <div class="koro koro--pulse white bottom desktop-koro">
-  </div>
 </header>

@@ -22,16 +22,16 @@
     --container-width: #{$container-width-l};
     --grid-gutter: 24px;
     --grid-columns: 12;
-    --content-width: calc(var(--container-width) / var(--grid-columns) * 8);
+    --content-width: calc(var(--container-width) / var(--grid-columns) * 10);
     --alignwide-width: var(--container-width);
     --contentwide-width: var(--alignwide-width);
   }
 
   @include mq($from: xlarge) {
-    --container-width: #{$container-width-xl}; // 1200px
+    --container-width: #{$container-width-l};
     --grid-gutter: 24px;
     --grid-columns: 12;
-    --content-width: calc(var(--container-width) / var(--grid-columns) * 8);
+    --content-width: calc(var(--container-width) / var(--grid-columns) * 10);
     --alignwide-width: var(--container-width);
     --contentwide-width: var(--alignwide-width);
   }

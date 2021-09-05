@@ -25,8 +25,6 @@
           </div>
         </div>
       </x-group>
-      <div class="koro koro--pulse white bottom desktop-koro">
-      </div>
     </header>
   @endif
 

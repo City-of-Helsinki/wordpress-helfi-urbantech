@@ -26,8 +26,14 @@ class ContentSingle extends Composer
     public function with()
     {
         $post = get_post();
+        $categories = get_the_category();
+        if (isset($categories) && sizeof($categories) >= 1) {
+            $category = $categories[0];
+        }
 
         return [
+            category => $category,
+            author => get_the_author_meta('display_name', $post->post_author),
         ];
     }
 }
