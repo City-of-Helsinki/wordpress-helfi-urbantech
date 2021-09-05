@@ -53,6 +53,7 @@ class PostTypes
     {
         $this->postTypes[] = $this->registerPost();
         $this->postTypes[] = $this->registerPage();
+        $this->postTypes[] = $this->registerPerson();
     }
 
     public function registerPost()
@@ -84,6 +85,27 @@ class PostTypes
         });
 
         return $page;
+    }
+
+    public function registerPerson()
+    {
+        $person = new PostType('person', [
+            'public' => false,
+            'show_ui' => true,
+            'has_archive' => false,
+            'show_in_rest' => true,
+            'supports' => ['title', 'thumbnail'],
+        ]);
+        $person->icon('dashicons-admin-users');
+        $person->columns()
+            ->add(['thumbnail' => ''])
+            ->order(['thumbnail' => 1])
+            ->populate('thumbnail', function ($column, $post_id) {
+                echo get_the_post_thumbnail($post_id, 'thumbnail');
+            });
+        $person->register();
+
+        return $person;
     }
 
     public function adminHead()
