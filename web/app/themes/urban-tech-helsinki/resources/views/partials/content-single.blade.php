@@ -25,25 +25,23 @@
   @endif
 
   <div class="entry-content">
-    <x-group>
-      @if (get_the_excerpt())
-        <p class="description">
-          {{ get_the_excerpt() }}
-        </p>
-      @endif
+    @if (get_the_excerpt())
+      <p class="description">
+        {{ get_the_excerpt() }}
+      </p>
+    @endif
 
-      @php(the_content())
+    @php(the_content())
 
-      @if (get_locale() == 'fi')
-        @include('partials/react-and-share')
-      @endif
+    @if (get_locale() == 'fi')
+      @include('partials/react-and-share')
+    @endif
 
-      @if ($author && $author !== 'adminx')
-        <p class="author">
-          {{$author}}
-        </p>
-      @endif
-    </x-group>
+    @if ($author && $author !== 'adminx')
+      <p class="author">
+        {{$author}}
+      </p>
+    @endif
 
   </div>
 
