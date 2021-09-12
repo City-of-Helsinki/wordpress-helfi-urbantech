@@ -36,6 +36,7 @@ class PageHeading extends Composer
      */
     public function printPageHeading(): bool
     {
-        return strpos(get_the_content(), '</h1>') === false;
+        $content = get_the_content();
+        return strpos($content, '</h1>') === false;
     }
 }
