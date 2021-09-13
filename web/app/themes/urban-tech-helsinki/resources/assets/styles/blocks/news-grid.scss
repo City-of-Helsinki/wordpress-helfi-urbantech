@@ -18,6 +18,11 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
+    max-height: #{30px * 4};
+
+    @include mq($from: large) {
+      max-height: #{34px * 4};
+    }
   }
 
   .read-more-link {

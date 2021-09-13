@@ -1,7 +1,7 @@
 <article @php(post_class())>
   @if ($printPageHeading)
     <header class="entry-header">
-      <x-group align="full" background="silver">
+      <x-group align="full">
         @if (function_exists('yoast_breadcrumb'))
           {{ yoast_breadcrumb( '<p id="breadcrumbs" class="alignwide">','</p>' ) }}
         @endif

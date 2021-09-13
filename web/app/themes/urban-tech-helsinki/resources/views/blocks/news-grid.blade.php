@@ -2,9 +2,9 @@
   <div class="{{ esc_attr($block->classes) }}">
     <div class="grid">
       @if ($show_all_articles_link)
-        <div class="cell small:12 medium:4 large:3">
+        <div class="cell small:12 medium:6 large:3">
           <div class="aspect-ratio-container">
-            <a href="/articles">
+            <a href="/news">
               <h1>{{__('News', 'hds')}}</h1>
               <div class="read-more-link">{{__('All articles>', 'hds')}}</div>
             </a>
@@ -19,7 +19,7 @@
               $category = $categories[0]->slug;
           }
         @endphp
-        <div class="cell small:12 medium:4 large:3 has-category-{{$category}}-background-color">
+        <div class="cell small:12 medium:6 large:3 has-category-{{$category}}-background-color">
           <div class="aspect-ratio-container">
             <a href="{{get_permalink($post)}}">
               <h3>
