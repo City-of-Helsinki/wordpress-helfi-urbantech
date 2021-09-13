@@ -125,7 +125,7 @@ add_action('template_redirect', function () {
 
 // Fix pagination on some pages
 add_filter('redirect_canonical', function ($redirect_url) {
-    if (is_single() && get_query_var('paged')) {
+    if (get_query_var('paged')) {
         return false;
     }
     return $redirect_url;

@@ -48,6 +48,7 @@ a.page-numbers {
 a.page-numbers {
   &:hover,
   &:focus {
+    color: white;
     background-color: rgba($color-black, 10%);
   }
 }
