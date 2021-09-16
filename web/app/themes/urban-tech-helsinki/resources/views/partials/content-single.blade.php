@@ -36,13 +36,6 @@
     @if (get_locale() == 'fi')
       @include('partials/react-and-share')
     @endif
-
-    @if ($author && $author !== 'adminx')
-      <p class="author">
-        {{$author}}
-      </p>
-    @endif
-
   </div>
 
   <x-group align="full" class="post-contacts">
