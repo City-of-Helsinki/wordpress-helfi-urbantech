@@ -32,8 +32,8 @@ class ContentSingle extends Composer
         }
 
         return [
-            category => $category,
-            author => get_the_author_meta('display_name', $post->post_author),
+            'category' => $category,
+            'author' => get_the_author_meta('display_name', $post->post_author),
         ];
     }
 }
