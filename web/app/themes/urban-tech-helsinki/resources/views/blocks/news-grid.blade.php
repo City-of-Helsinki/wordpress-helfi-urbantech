@@ -42,4 +42,6 @@
       @include('partials.pagination', ['query' => $query, 'fragment' => $block->id ?? 'listing'])
     </div>
   @endif
+@else
+  <!-- no posts -->
 @endif
