@@ -29,3 +29,16 @@ p.is-style-tip {
     -webkit-mask-size: auto;
   }
 }
+
+.is-style-txt-link {
+  font-weight: bold;
+  font-size: 21.8px;
+  line-height: 37.4px;
+  letter-spacing: -0.6px;
+
+  @include mq($from: large) {
+    font-size: 28px;
+    line-height: 48px;
+    letter-spacing: -0.8px;
+  }
+}

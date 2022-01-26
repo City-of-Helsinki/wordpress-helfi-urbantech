@@ -150,4 +150,9 @@ domReady(() => {
     label: 'Partner grid',
     isDefault: false,
   });
+  registerBlockStyle('core/paragraph', {
+    name: 'txt-link',
+    label: 'TXT Link',
+    isDefault: false,
+  });
 });
