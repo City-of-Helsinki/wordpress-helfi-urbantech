@@ -135,4 +135,9 @@ domReady(() => {
     label: 'Outline',
     isDefault: true,
   });
+  registerBlockStyle('core/media-text', {
+    name: 'wide',
+    label: 'Wide',
+    isDefault: false,
+  });
 });

@@ -19,7 +19,11 @@
 
     @include mq($from: large) {
       padding: 64px 40px 64px 40px;
+    }
+  }
 
+  &:not(.is-style-wide) &__content {
+    @include mq($from: large) {
       > *:not(h1) {
         max-width: 480px;
       }
