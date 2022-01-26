@@ -19,6 +19,10 @@
     }
   }
 
+  @include mq($from: large) {
+    min-height: 640px;
+  }
+
   .wp-block-cover__inner-container {
     padding: 20px 15px;
     text-align: inherit;
@@ -48,8 +52,10 @@
     }
 
     @include mq($from: large) {
-      padding: 62px 40px 62px 40px;
-      max-width: 480px;
+      padding: 60px 40px 60px 40px;
+      p {
+        max-width: 480px;
+      }
     }
   }
 }
