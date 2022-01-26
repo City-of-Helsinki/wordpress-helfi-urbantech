@@ -80,3 +80,17 @@ p:last-child {
 .has-background-dim:not(.has-background) {
   color: $color-white;
 }
+
+@if $is-frontend {
+  .is-mobile-only {
+    @include mq($from: medium) {
+      display: none;
+    }
+  }
+
+  .is-desktop-only {
+    @include mq($until: medium) {
+      display: none !important;
+    }
+  }
+}
