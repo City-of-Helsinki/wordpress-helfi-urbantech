@@ -15,10 +15,8 @@ for (let i = 0; i < submenuTriggers.length; i++) {
   })
 }
 
-if (matchMedia('(min-width: 1024px)').matches) {
-  if (document.querySelector('.site-navigation')) {
-    menu(document.querySelector('.site-navigation'));
-  }
+if (document.querySelector('.site-navigation')) {
+  menu(document.querySelector('.site-navigation'));
 }
 
 function setAppHeight () {
@@ -114,12 +112,14 @@ export function menu(menu) {
     const itemWithSubmenu = itemsWithSubmenu[i]
 
     itemWithSubmenu.addEventListener('mouseover', () => requestAnimationFrame(() => {
+      if (!matchMedia('(min-width: 1024px)').matches) return
       // Close other submenus
       Array.from(itemsWithSubmenu).forEach(closeItem)
       openItem(itemWithSubmenu)
     }))
 
     itemWithSubmenu.addEventListener('mouseout', () => requestAnimationFrame(() => {
+      if (!matchMedia('(min-width: 1024px)').matches) return
       closeItem(itemWithSubmenu)
     }))
   }
