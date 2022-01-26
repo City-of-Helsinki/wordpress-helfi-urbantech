@@ -133,21 +133,21 @@ add_action('after_setup_theme', function () {
     ));
 
     add_theme_support('editor-font-sizes', [
-        [
-            'name' => __('small', 'sage'),
-            'slug' => 'small',
-            'size' => 14,
-        ],
-        [
-            'name' => __('medium', 'sage'),
-            'slug' => 'medium',
-            'size' => 18,
-        ],
-        [
-            'name' => __('large', 'sage'),
-            'slug' => 'large',
-            'size' => 20,
-        ],
+        // [
+        //     'name' => __('small', 'sage'),
+        //     'slug' => 'small',
+        //     'size' => 14,
+        // ],
+        // [
+        //     'name' => __('medium', 'sage'),
+        //     'slug' => 'medium',
+        //     'size' => 18,
+        // ],
+        // [
+        //     'name' => __('large', 'sage'),
+        //     'slug' => 'large',
+        //     'size' => 20,
+        // ],
     ]);
 
     add_theme_support('wp-block-styles');
