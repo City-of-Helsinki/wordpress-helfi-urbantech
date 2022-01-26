@@ -73,7 +73,8 @@ h6 {
   }
 }
 
-h1 {
+h1,
+.is-style-size-h1 {
   font-size: $fontsize-heading-1-mobile;
   line-height: $lineheight-heading-1-mobile;
 
@@ -83,7 +84,8 @@ h1 {
   }
 }
 
-h2 {
+h2,
+.is-style-size-h2 {
   font-size: $fontsize-heading-2-mobile;
   line-height: $lineheight-heading-2-mobile;
 
@@ -93,7 +95,8 @@ h2 {
   }
 }
 
-h3 {
+h3,
+.is-style-size-h3 {
   font-size: $fontsize-heading-3-mobile;
   line-height: $lineheight-heading-3-mobile;
 
@@ -103,15 +106,18 @@ h3 {
   }
 }
 
-h4 {
+h4,
+.is-style-size-h4 {
   font-size: $fontsize-heading-4;
 }
 
-h5 {
+h5,
+.is-style-size-h5 {
   font-size: $fontsize-heading-5;
 }
 
-h6 {
+h6,
+.is-style-size-h6 {
   font-size: $fontsize-heading-6;
 }
 

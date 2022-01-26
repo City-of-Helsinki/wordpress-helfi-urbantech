@@ -155,4 +155,11 @@ domReady(() => {
     label: 'TXT Link',
     isDefault: false,
   });
+  ; ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].forEach(heading => {
+    registerBlockStyle('core/heading', {
+      name: `size-${heading}`,
+      label: `${heading.toUpperCase()} size`,
+      isDefault: false,
+    });
+  })
 });
