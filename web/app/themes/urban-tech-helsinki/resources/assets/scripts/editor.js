@@ -145,7 +145,7 @@ domReady(() => {
     label: 'Wide',
     isDefault: false,
   });
-  registerBlockStyle('core/column', {
+  registerBlockStyle('core/columns', {
     name: 'partner-grid',
     label: 'Partner grid',
     isDefault: false,
