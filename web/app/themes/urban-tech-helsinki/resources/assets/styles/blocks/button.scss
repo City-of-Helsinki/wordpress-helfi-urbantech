@@ -13,6 +13,23 @@
     }
   }
 
+  &.is-style-text {
+    background: transparent;
+
+    .wp-block-button__link {
+      border: 2px solid transparent;
+      background: transparent;
+
+      &:hover {
+        border-color: transparent;
+      }
+
+      &:not(.has-text-color) {
+        color: $color-black;
+      }
+    }
+  }
+
   &__link {
     position: relative;
     display: inline-flex;

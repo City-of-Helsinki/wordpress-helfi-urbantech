@@ -135,6 +135,11 @@ domReady(() => {
     label: 'Outline',
     isDefault: true,
   });
+  registerBlockStyle('core/button', {
+    name: 'text',
+    label: 'Text',
+    isDefault: true,
+  });
   registerBlockStyle('core/media-text', {
     name: 'wide',
     label: 'Wide',
