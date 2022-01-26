@@ -4,6 +4,8 @@
 
 .wp-block-button {
   border-radius: 0;
+  // Workaround for background slider not working in some contexts.
+  z-index: 0;
 
   &.is-style-outline {
     background: transparent;
