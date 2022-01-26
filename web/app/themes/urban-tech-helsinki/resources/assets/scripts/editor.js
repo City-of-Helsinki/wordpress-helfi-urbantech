@@ -145,4 +145,9 @@ domReady(() => {
     label: 'Wide',
     isDefault: false,
   });
+  registerBlockStyle('core/column', {
+    name: 'partner-grid',
+    label: 'Partner grid',
+    isDefault: false,
+  });
 });
