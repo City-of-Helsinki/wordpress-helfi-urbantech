@@ -162,4 +162,9 @@ domReady(() => {
       isDefault: false,
     });
   })
+  registerBlockStyle('core/heading', {
+    name: `article-title`,
+    label: 'Article Title',
+    isDefault: false,
+  })
 });

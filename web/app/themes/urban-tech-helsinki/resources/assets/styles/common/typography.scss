@@ -121,6 +121,18 @@ h6,
   font-size: $fontsize-heading-6;
 }
 
+.is-style-article-title {
+  font-size: $fontsize-article-title-mobile;
+  line-height: $lineheight-article-title-mobile;
+  letter-spacing: $letterspacing-article-title-mobile;
+
+  @include mq($from: large) {
+    font-size: $fontsize-article-title;
+  line-height: $lineheight-article-title;
+  letter-spacing: $letterspacing-article-title;
+  }
+}
+
 blockquote {
   font-size: 22px;
   line-height: 1.55;
