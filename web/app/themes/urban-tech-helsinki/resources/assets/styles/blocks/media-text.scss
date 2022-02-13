@@ -24,7 +24,7 @@
 
   &:not(.is-style-wide) &__content {
     @include mq($from: large) {
-      > *:not(h1) {
+      > p {
         max-width: 480px;
       }
     }
