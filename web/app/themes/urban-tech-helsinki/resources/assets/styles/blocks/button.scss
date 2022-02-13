@@ -15,6 +15,14 @@
     }
   }
 
+  &.is-style-outline {
+    .wp-block-button__link {
+      &:not(.has-text-color) {
+        color: $color-black;
+      }
+    }
+  }
+
   &.is-style-text {
     background: transparent;
 
@@ -28,6 +36,10 @@
 
       &:not(.has-text-color) {
         color: $color-black;
+      }
+
+      &.has-black-background-color:not(.has-text-color) {
+        color: $color-white;
       }
     }
   }
@@ -44,6 +56,8 @@
     overflow: hidden;
     transition: color 0.25s ease-in-out,
       border-color 0.25s ease-in-out;
+    font-size: $fontsize-body;
+    line-height: $lineheight-body;
 
     &:focus {
       outline: solid 3px currentColor;
@@ -82,7 +96,8 @@
       }
     }
 
-    &:not(.has-text-color) { // black color
+    &:not(.has-text-color),
+    &.has-black-color { // black color
       &::before {
         background: black;
       }
@@ -90,6 +105,26 @@
       &:hover {
         color: white !important;
         border-color: black;
+      }
+    }
+
+    // Special workaround for buttons with black background. The background is
+    // made transparent and the slider slides off to the right instead.
+    &.has-black-background-color {
+      background-color: transparent !important;
+      color: white !important;
+
+      &::before {
+        left: 0;
+      }
+
+      &:hover {
+        background: transparent !important;
+        color: black !important;
+
+        &::before {
+          left: 100%;
+        }
       }
     }
   }
