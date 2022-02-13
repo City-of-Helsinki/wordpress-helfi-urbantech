@@ -38,7 +38,8 @@
   }
 }
 
-.wp-block-columns.is-style-partner-grid {
+.wp-block-columns.is-style-partner-grid,
+.wp-block-columns.is-style-startup-grid {
   .wp-block-column {
     position: relative;
 
@@ -53,8 +54,21 @@
     p {
       max-width: 480px;
     }
+  }
+}
+
+.wp-block-columns.is-style-startup-grid {
+  .wp-block-column {
+    padding-bottom: 80px;
 
     @include mq($from: 350px) {
+      .wp-block-buttons {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        margin-bottom: 0;
+      }
+
       p.category-name {
         position: absolute;
         margin-bottom: 0;

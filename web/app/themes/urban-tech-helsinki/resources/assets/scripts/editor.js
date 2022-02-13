@@ -150,6 +150,11 @@ domReady(() => {
     label: 'Partner grid',
     isDefault: false,
   });
+  registerBlockStyle('core/columns', {
+    name: 'startup-grid',
+    label: 'Startup grid',
+    isDefault: false,
+  });
   registerBlockStyle('core/paragraph', {
     name: 'txt-link',
     label: 'TXT Link',
