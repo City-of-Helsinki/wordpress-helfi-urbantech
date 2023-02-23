@@ -7,7 +7,7 @@ require:
 
 '@docker':
   path: /var/www/html/web/wp
-  url: urban-tech-helsinki.ddev.local
+  url: urban-tech-helsinki.ddev.site
 
 '@dev':
   ssh: vagrant@urban-tech-helsinki.test/var/www/wordpress/web/wp
