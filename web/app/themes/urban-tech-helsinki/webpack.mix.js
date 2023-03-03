@@ -23,6 +23,7 @@ mix.sass('resources/assets/styles/app.scss', 'styles')
 
 mix.js('resources/assets/scripts/app.js', 'scripts')
    .js('resources/assets/scripts/customizer.js', 'scripts')
+   .js('resources/assets/scripts/accordion.js', 'scripts')
    .blocks('resources/assets/scripts/editor.js', 'scripts')
    .extract();
 

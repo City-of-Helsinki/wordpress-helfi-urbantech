@@ -54,6 +54,7 @@ class PostTypes
         $this->postTypes[] = $this->registerPost();
         $this->postTypes[] = $this->registerPage();
         $this->postTypes[] = $this->registerPerson();
+        $this->postTypes[] = $this->registerFaq();
     }
 
     public function registerPost()
@@ -106,6 +107,24 @@ class PostTypes
         $person->register();
 
         return $person;
+    }
+
+    public function registerFaq()
+    {
+      $faq = new PostType('faq',[
+        'labels' => [
+          'name' => __('FAQs'),
+          'singular_name' => __('FAQ')
+        ],
+        'public' => true,
+        'has_archive' => false,
+        'rewrite' => ['slug' => 'faq'],
+        'supports' => ['title', 'editor', 'page-attributes'],
+    ]);
+      $faq->icon('dashicons-editor-help');
+      $faq->register();
+
+      return $faq;
     }
 
     public function adminHead()
