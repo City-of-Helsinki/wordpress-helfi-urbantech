@@ -111,20 +111,20 @@ class PostTypes
 
     public function registerFaq()
     {
-      $faq = new PostType('faq',[
-        'labels' => [
-          'name' => __('FAQs'),
-          'singular_name' => __('FAQ')
-        ],
-        'public' => true,
-        'has_archive' => false,
-        'rewrite' => ['slug' => 'faq'],
-        'supports' => ['title', 'editor', 'page-attributes'],
-    ]);
-      $faq->icon('dashicons-editor-help');
-      $faq->register();
+        $faq = new PostType('faq', [
+            'labels' => [
+                'name' => __('FAQs'),
+                'singular_name' => __('FAQ')
+            ],
+            'public' => true,
+            'has_archive' => false,
+            'rewrite' => ['slug' => 'faq'],
+            'supports' => ['title', 'editor', 'page-attributes'],
+        ]);
+        $faq->icon('dashicons-editor-help');
+        $faq->register();
 
-      return $faq;
+        return $faq;
     }
 
     public function adminHead()
