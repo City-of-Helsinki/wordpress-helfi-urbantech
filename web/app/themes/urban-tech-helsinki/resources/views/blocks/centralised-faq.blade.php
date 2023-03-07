@@ -21,16 +21,16 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {% for $faq in $faqs %}
+      @foreach ($faqs as $faq)
       {
         "@type": "Question",
         "name": "{{$faq->post_title}}",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "{{$faq->post_content}}"
+          "text": "{{preg_replace('/\s+/', ' ', wp_strip_all_tags($faq->post_content))}}"
         }
-      }{% if not loop.last %},{% endif %}
-      {% endfor %}
+      }@if (!$loop->last),@endif
+      @endforeach
     ]
   }
 </script>
