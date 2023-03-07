@@ -11,7 +11,7 @@ class CentralisedFaq extends Block
   public $description = 'Shows a list of all FAQs using expansion panels.';
   public $category = 'widgets';
   public $icon = 'editor-help';
-  public $mode = 'auto';
+  public $mode = 'preview';
   public $supports = [
     'align' => ['full', 'wide'],
     'mode' => false,
