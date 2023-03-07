@@ -119,6 +119,7 @@ class PostTypes
             'public' => true,
             'has_archive' => false,
             'rewrite' => ['slug' => 'faq'],
+            'show_in_rest' => true,
             'supports' => ['title', 'editor', 'page-attributes'],
         ]);
         $faq->icon('dashicons-editor-help');
